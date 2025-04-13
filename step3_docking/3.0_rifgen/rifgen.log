@@ -1,0 +1,836 @@
+core.init: Rosetta version: rosetta.source.release-171 r171 2018.09+release.333d9969977 333d99699777cd6a50d1c1736bacd689f8f1d1df https://www.rosettacommons.org 2018-02-27T20:08:15.525183
+core.init: command: /home/liyunhao/rosetta_src_2018.09.60072_bundle/main/source/rifdock/build/apps/rosetta/rifgen @rifgen_ACP.flags
+core.init: 'RNG device' seed mode, using '/dev/urandom', seed=724750621 seed_offset=0 real_seed=724750621
+core.init.random: RandomGenerator:init: Normal mode, seed=724750621 RG_type=mt19937
+Rifdock thinks there are 256 threads.
+rif_type: RotScoreSat
+
+=================================================== preparing target ===================================================
+
+core.chemical.GlobalResidueTypeSet: Finished initializing fa_standard residue type set.  Created 604 residue types
+core.chemical.GlobalResidueTypeSet: Total time to initialize 1.39378 seconds.
+core.import_pose.import_pose: File 'ACP.pdb' automatically determined to be of type PDB
+target nres: 1
+target_res_file: ''
+target_res: [1]
+centering target from       1.433555555555556       7.627666666666666     -0.7930000000000000 to ( 0, 0, 0 )
+Preparing rotamer index spec...
+get_rotamer_index
+core.pack.task: Packer task: initialize from command line() 
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib_fixes_enable option is true.
+core.pack.dunbrack.RotamerLibrary: shapovalov_lib::shap_dun10_smooth_level of 1( aka lowest_smooth ) got activated.
+core.pack.dunbrack.RotamerLibrary: Binary rotamer library selected: /home/liyunhao/rosetta_src_2018.09.60072_bundle/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin
+core.pack.dunbrack.RotamerLibrary: Using Dunbrack library binary file '/home/liyunhao/rosetta_src_2018.09.60072_bundle/main/database/rotamer/shapovalov/StpDwn_0-0-0/Dunbrack10.lib.bin'.
+core.pack.dunbrack.RotamerLibrary: Dunbrack 2010 library took 0.198692 seconds to load from binary
+core.pack.task: Packer task: initialize from command line() 
+core.pack.task: Packer task: initialize from command line() 
+core.pack.task: Packer task: initialize from command line() 
+finish builidng rotamer_index now try fill rotamer index ... 
+start building rotamer index from fill rotamers
+n_p_rots: 388
+n_rots: 1654
+n_par_rots: 1654
+total num protonchi_parent_of_ 1501
+total num structural_parents_ 62
+finish build_index...
+======================================================================================
+RotamerIndex:
+    ALA 1 0-0 0 0
+    CYS 9 2-10 2 1
+    ASP 7 11-17 2 0
+    GLU 27 18-44 3 0
+    PHE 15 45-59 2 0
+    GLY 1 1-1 0 0
+    HIS 14 60-73 2 0
+    ILE 7 88-94 2 0
+    LYS 31 95-125 4 0
+    LEU 9 126-134 2 0
+    MET 19 135-153 3 0
+    ASN 13 154-166 2 0
+    PRO 2 167-168 3 0
+    GLN 25 169-193 3 0
+    ARG 42 194-235 4 0
+    SER 54 236-289 2 1
+    THR 54 290-343 2 1
+    VAL 3 344-346 1 0
+    TRP 19 347-365 2 0
+    TYR 22 366-387 3 1
+    DAL 0 0--1 0 0
+    DCS 0 0--1 0 0
+    DAS 0 0--1 0 0
+    DGU 0 0--1 0 0
+    DPH 0 0--1 0 0
+    DHI 0 0--1 0 0
+    DIL 0 0--1 0 0
+    DLY 0 0--1 0 0
+    DLE 0 0--1 0 0
+    DME 0 0--1 0 0
+    DAN 0 0--1 0 0
+    DPR 0 0--1 0 0
+    DGN 0 0--1 0 0
+    DAR 0 0--1 0 0
+    DSE 0 0--1 0 0
+    DTH 0 0--1 0 0
+    DVA 0 0--1 0 0
+    DTR 0 0--1 0 0
+    DTY 0 0--1 0 0
+
+======================================================================================
+rosetta_field lb: -0.409556 -2.80967 -1.943  ub: 0.525444 2.31333 1.797  size(A): 0.935 5.123 3.74 
+thread 194 init  rosetta_field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype6.rosetta_field.gz
+thread  76 init  rosetta_field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype12.rosetta_field.gz
+thread 230 init  rosetta_field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype11.rosetta_field.gz
+thread 138 init  rosetta_field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype20.rosetta_field.gz
+thread 176 init  rosetta_field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype18.rosetta_field.gz
+thread 151 init  rosetta_field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype5.rosetta_field.gz
+thread 185 init  rosetta_field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype3.rosetta_field.gz
+thread 137 init  rosetta_field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype13.rosetta_field.gz
+thread  66 init  rosetta_field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype15.rosetta_field.gz
+thread 254 init  rosetta_field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype8.rosetta_field.gz
+thread 189 init  rosetta_field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype19.rosetta_field.gz
+thread  58 init  rosetta_field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype2.rosetta_field.gz
+thread  68 init  rosetta_field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype16.rosetta_field.gz
+thread 141 init  rosetta_field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype17.rosetta_field.gz
+thread 200 init  rosetta_field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype10.rosetta_field.gz
+thread  67 init  rosetta_field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype14.rosetta_field.gz
+thread 252 init  rosetta_field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype21.rosetta_field.gz
+thread 188 init  rosetta_field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype1.rosetta_field.gz
+thread 253 init  rosetta_field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype9.rosetta_field.gz
+thread 153 init  rosetta_field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype4.rosetta_field.gz
+thread 136 init  rosetta_field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry__atype7.rosetta_field.gz
+thread 189 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype2.rf.gz
+thread  76 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype20.rf.gz
+thread 141 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype20.rf.gz
+thread  68 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype2.rf.gz
+thread  67 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype19.rf.gz
+thread  66 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype1.rf.gz
+thread 151 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype15.rf.gz
+thread 253 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype11.rf.gz
+thread  58 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype17.rf.gz
+thread 158 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype10.rf.gz
+thread  39 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype17.rf.gz
+thread  48 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype6.rf.gz
+thread 242 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype7.rf.gz
+thread  47 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype9.rf.gz
+thread 215 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype5.rf.gz
+thread  53 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype16.rf.gz
+thread 154 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype3.rf.gz
+thread 247 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype1.rf.gz
+thread 178 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype18.rf.gz
+thread 133 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype11.rf.gz
+thread 208 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype12.rf.gz
+thread 157 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype8.rf.gz
+thread  28 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype14.rf.gz
+thread 203 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype7.rf.gz
+thread  46 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype12.rf.gz
+thread 160 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype6.rf.gz
+thread 120 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype9.rf.gz
+thread 155 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype13.rf.gz
+thread 115 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype19.rf.gz
+thread 186 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype14.rf.gz
+thread  35 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype21.rf.gz
+thread 238 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype5.rf.gz
+thread  23 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype18.rf.gz
+thread 244 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype15.rf.gz
+thread  69 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype4.rf.gz
+thread 102 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype15.rf.gz
+thread 246 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype4.rf.gz
+thread 122 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype14.rf.gz
+thread  81 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype3.rf.gz
+thread 181 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype9.rf.gz
+thread  54 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype7.rf.gz
+thread 109 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype8.rf.gz
+thread 143 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype17.rf.gz
+thread 171 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype13.rf.gz
+thread  42 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype16.rf.gz
+thread  72 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype11.rf.gz
+thread 249 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype16.rf.gz
+thread 216 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype8.rf.gz
+thread   4 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype6.rf.gz
+thread 105 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype21.rf.gz
+thread 106 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype20.rf.gz
+thread 173 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype12.rf.gz
+thread  15 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype10.rf.gz
+thread 134 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype5.rf.gz
+thread  44 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype18.rf.gz
+thread 169 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype13.rf.gz
+thread  88 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype10.rf.gz
+thread 243 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype21.rf.gz
+thread  83 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype4.rf.gz
+thread 149 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype3.rf.gz
+thread 236 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding3_0.75_atype1.rf.gz
+thread 234 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1.5_0.375_atype19.rf.gz
+thread  51 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.75_0.25_atype2.rf.gz
+done with rifgen grids, not make target ones for docking
+thread 238 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype3.rf.gz
+thread 181 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype16.rf.gz
+thread   4 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype21.rf.gz
+thread 143 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype19.rf.gz
+thread  23 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype6.rf.gz
+thread 138 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype3.rf.gz
+thread 249 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype2.rf.gz
+thread 253 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype19.rf.gz
+thread 157 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype15.rf.gz
+thread  28 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype18.rf.gz
+thread 160 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype17.rf.gz
+thread  46 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype9.rf.gz
+thread 158 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype16.rf.gz
+thread 203 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype14.rf.gz
+thread 105 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype21.rf.gz
+thread   1 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype10.rf.gz
+thread 243 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype2.rf.gz
+thread 109 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype15.rf.gz
+thread  15 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype4.rf.gz
+thread   2 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype5.rf.gz
+thread  55 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype6.rf.gz
+thread  44 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype15.rf.gz
+thread 173 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype5.rf.gz
+thread  39 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype5.rf.gz
+thread 189 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype3.rf.gz
+thread 102 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype7.rf.gz
+thread 234 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype1.rf.gz
+thread 252 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype18.rf.gz
+thread 106 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype4.rf.gz
+thread  48 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype8.rf.gz
+thread  88 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype12.rf.gz
+thread 120 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype20.rf.gz
+thread 150 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype11.rf.gz
+thread 235 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype7.rf.gz
+thread  38 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype12.rf.gz
+thread 232 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype14.rf.gz
+thread 231 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype13.rf.gz
+thread 144 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype18.rf.gz
+thread  14 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype16.rf.gz
+thread  18 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype17.rf.gz
+thread  20 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype15.rf.gz
+thread 226 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype8.rf.gz
+thread  81 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype13.rf.gz
+thread 254 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype10.rf.gz
+thread 246 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype14.rf.gz
+thread 149 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype4.rf.gz
+thread  74 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype9.rf.gz
+thread 244 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype10.rf.gz
+thread  32 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype19.rf.gz
+thread 122 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype8.rf.gz
+thread  54 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype12.rf.gz
+thread 199 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype10.rf.gz
+thread 171 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype7.rf.gz
+thread  72 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype20.rf.gz
+thread 195 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype7.rf.gz
+thread 208 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype4.rf.gz
+thread 169 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype5.rf.gz
+thread 186 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype9.rf.gz
+thread 151 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype8.rf.gz
+thread  53 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype16.rf.gz
+thread 155 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype9.rf.gz
+thread  83 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype13.rf.gz
+thread 137 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype11.rf.gz
+thread 154 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype10.rf.gz
+thread 115 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype12.rf.gz
+thread  58 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype6.rf.gz
+thread  51 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype21.rf.gz
+thread  67 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype4.rf.gz
+thread 133 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype15.rf.gz
+thread 176 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype20.rf.gz
+thread 247 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype16.rf.gz
+thread 178 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype12.rf.gz
+thread  69 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype13.rf.gz
+thread  35 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype18.rf.gz
+thread 141 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype14.rf.gz
+thread 222 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype14.rf.gz
+thread  26 init bounding field 14 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype14.rf.gz
+thread 221 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype11.rf.gz
+thread 206 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype21.rf.gz
+thread 101 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype1.rf.gz
+thread   8 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype17.rf.gz
+thread 179 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype11.rf.gz
+thread 251 init bounding field  4 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype4.rf.gz
+thread  62 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype9.rf.gz
+thread  87 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype2.rf.gz
+thread  37 init bounding field 16 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype16.rf.gz
+thread 142 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype6.rf.gz
+thread   9 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype19.rf.gz
+thread 237 init bounding field 12 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype12.rf.gz
+thread 241 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype11.rf.gz
+thread 108 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype13.rf.gz
+thread  24 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype20.rf.gz
+thread 168 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype8.rf.gz
+thread  75 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype2.rf.gz
+thread 116 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype7.rf.gz
+thread  96 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype17.rf.gz
+thread  31 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype5.rf.gz
+thread  40 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype19.rf.gz
+thread  11 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype20.rf.gz
+thread  27 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype18.rf.gz
+thread 205 init bounding field  9 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype9.rf.gz
+thread 113 init bounding field 15 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype15.rf.gz
+thread 132 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype3.rf.gz
+thread 225 init bounding field 20 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype20.rf.gz
+thread 224 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype21.rf.gz
+thread  17 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype1.rf.gz
+thread   3 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype17.rf.gz
+thread 248 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding16_4_atype3.rf.gz
+thread 117 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype2.rf.gz
+thread 110 init bounding field 11 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding4_1_atype11.rf.gz
+thread 227 init bounding field 19 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype19.rf.gz
+thread 140 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype1.rf.gz
+thread 177 init bounding field 17 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype17.rf.gz
+thread 112 init bounding field  8 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype8.rf.gz
+thread 198 init bounding field 10 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype10.rf.gz
+thread 159 init bounding field 21 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype21.rf.gz
+thread  45 init bounding field 13 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype13.rf.gz
+thread 139 init bounding field  2 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype2.rf.gz
+thread  50 init bounding field  3 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype3.rf.gz
+thread  92 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype1.rf.gz
+thread   7 init bounding field  1 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype1.rf.gz
+thread  41 init bounding field 18 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding8_2_atype18.rf.gz
+thread 161 init bounding field  5 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding2_0.5_atype5.rf.gz
+thread  56 init bounding field  7 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype7.rf.gz
+thread 131 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding1_0.25_atype6.rf.gz
+thread 187 init bounding field  6 CACHE TO /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry_bounding0.5_0.25_atype6.rf.gz
+target_donors.size() 0 target_acceptors.size() 2
+Building DonorAcceptorCache with 0.1 safe distance
+Donors: Preparing DonorAcceptorCache with interaction range 3.3...
+Max sats at one voxel: 0
+Acceptors: Preparing DonorAcceptorCache with interaction range 3.3...
+Max sats at one voxel: 2
+Tested 0 hbonds without errors
+RifGeneratorSimpleHbonds, cache data path: ./cache_dir
+========================== DO HBOND ==================================
+adding acc res ACP to std set
+n_sat_groups = 2
+RifGenSimpleHbonds checking res ACP
+not putting ACP into rif, no N,CA,C
+preloading / generating hbond_geometry files
+add add ACP to hbgeom_exemplars_rtype_overrideadd 
+add ACP to hbgeom_exemplars_rtype_override
+ACP to hbgeom_exemplars_rtype_override
+add ACP to hbgeom_exemplars_rtype_override
+add ACP to hbgeom_exemplars_rtype_override
+add ACP to hbgeom_exemplars_rtype_override
+add ACP to hbgeom_exemplars_rtype_override
+ACP to hbgeom_exemplars_rtype_override
+GENERATING HBOND GEOMETRIES pair 4 of 8 : LYS/ACP -- FIX_ACC_
+==================================================================================================================
+===================== Thread 149 HBondedPairGenerator LYS ACP ================================================
+==================================================================================================================
+alignment atomnos ACP 7 8 9
+ROTATION_SAMPLING tip_tol: 60 rot_range: 360 resl: 6
+GENERATING HBOND GEOMETRIES pair 7gen_hbond_rotations: spacing 0.17952 n1 35 n2 6
+   short_tol 1.0472
+   long_tol  6.28319
+   reslang   0.10472
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBPoly1D.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBFadeIntervals.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/HBEval.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/DonStrength.csv
+basic.io.database: Database file opened: scoring/score_functions/hbonds/ref2015_params/AccStrength.csv
+-----LYS-----ACP
+ of 8 : HIS/ACP -- FIX_ACC_
+GENERATING HBOND GEOMETRIES pair 6 of 8 : TYR/ACP -- FIX_ACC_
+GENERATING HBOND GEOMETRIES pair 5 of 8 : GLN/ACP -- FIX_ACC_
+==================================================================================================================
+GENERATING HBOND GEOMETRIES pair ==================================================================================================================
+===================== Thread 110 HBondedPairGenerator GLN ACP ================================================
+==================================================================================================================
+==================================================================================================================
+===================== Thread 62 HBondedPairGenerator TYR ACP ================================================
+==================================================================================================================
+alignment atomnos ACP alignment atomnos ACP7  ===================== Thread 8 9
+774 HBondedPairGenerator HIS 8ROTATION_SAMPLING tip_tol:  9
+ROTATION_SAMPLING tip_tol:  60 rot_range: 360 resl: 6
+gen_hbond_rotations: spacing 0.17952 n1 35 n2 6
+   short_tol 1.0472
+   long_tol  6.28319
+60 rot_range: 360 resl: 6   reslang   
+gen_hbond_rotations: spacing ACP0.17952 n1 35 n2 6
+   short_tol 1.0472
+   long_tol  6.28319
+   reslang   0.10472
+0.10472
+ ================================================
+==================================================================================================================
+alignment atomnos ACP 7 8 9
+ROTATION_SAMPLING tip_tol: 60 rot_range: 360 resl: 6
+gen_hbond_rotations: spacing 0.17952 n1 35 n2 6
+   short_tol 1.0472
+   long_tol  6.28319
+   reslang   0.10472
+----done-----
+found ACP in exemplars
+adding rotamers res1 LYS 95-125 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+-----HIS-----ACP
+-----GLN-----ACP
+no rotamers for res2 ACP
+-----TYR-----ACP
+HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5   
+3 of ----done-----8
+consider orbitals for atom 1  O1 
+----done-----acceptor orbitals, index: 1 atom:  O1  orbitals: [3, 4]
+
+donor atoms: 1HZ , 2HZ , 3HZ , 
+donor nchi: 4
+donor num rots: 31
+acceptor num rots: 1
+N hbond geom samples: 7735
+ : total raw samples: 1438710
+ARGfound /ACP -- FIX_ACC_
+found ACP in exemplars
+GENERATING HBOND GEOMETRIES pair 8 of 8 : ASN/ACP -- FIX_ACC_
+GENERATING HBOND GEOMETRIES pair 1 of 8 : ACPSER in exemplars
+/ACP -- FIX_ACC_
+GENERATING HBOND GEOMETRIES pair 2 of 8 : THR/ACP -- FIX_ACC_
+==================================================================================================================
+adding rotamers res1 HIS 60-73 60===================== Thread 11 HBondedPairGenerator ARG ACP ================================================
+==================================================================================================================
+================================================================================================================== 61 62 63 
+========================================================================================================================================================================================================================================================= Thread 210 HBondedPairGenerator SER ACP ================================================
+==================================================================================================================
+----done-----alignment atomnos 
+adding rotamers res1 GLN 169-193 169ACP 7 8 9
+ 170 171 172 173ROTATION_SAMPLING tip_tol:  174 64175 65 176 66 67  17768 69 70 178 71 179 72  18073
+
+60 rot_range:  360===================== Thread 177 HBondedPairGenerator THR ACP ================================================
+==================================================================================================================
+alignment atomnos ===================== Thread ACP 1817 8 9
+
+ resl: found ACP in exemplars
+alignment atomnos ACP 7 8 9
+ROTATION_SAMPLING tip_tol: 6
+gen_hbond_rotations: spacing 0.17952 n1 35 n2 6
+   short_tol 1.0472
+   long_tol  2056.28319 HBondedPairGenerator ASN ACP ================================================
+==================================================================================================================
+ 182 183 184no rotamers for res2  185 ACP186
+
+ROTATION_SAMPLING tip_tol: adding rotamers res1 60 rot_range:    reslang   TYR  36060HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5    resl: 6
+alignment atomnos 366gen_hbond_rotations: spacing ACP-0.17952 rot_range: 
+0.10472 7 8 9387 n1 
+ 
+366consider orbitals for atom 360 resl: 1ROTATION_SAMPLING tip_tol: 6==================================================================================================================
+============ Thread 149 generating hotspot geometries LYS ACP =======================================
+==================================================================================================================
+
+gen_hbond_rotations: spacing 0.17952 n1 35 n2 6
+   short_tol 187 188 189 190 191 192  193
+no rotamers for res2 ACP
+60 rot_range: 360 resl: 6
+gen_hbond_rotations: spacing 0.17952 n1 35 n2 6
+ O1    short_tol HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5   
+ 35367 368
+1.0472consider orbitals for atom 
+ n2 acceptor orbitals, index: 1.04726 1 atom: 
+1 O1 369
+ 370 371   long_tol     orbitals:    short_tol [3, 1.04723726.283194
+] O1    long_tol  
+
+6.28319   long_tol  
+acceptor orbitals, index:    reslang   0.10472
+
+donor atoms:  HE2, 
+1donor nchi: 2
+ 6.28319 atom:    reslang   donor num rots: 
+14
+373acceptor num rots: 1
+0.10472 O1 N hbond geom samples:  orbitals: [37735
+, 4]
+
+donor atoms: total raw samples: 216580
+   reslang   0.10472
+1HE2, 2HE2, 
+donor nchi: 3
+donor num rots: 25
+acceptor num rots: 1
+N hbond geom samples: 7735
+total raw samples: 773500
+ 374 375 376 377 378 379 380 381 382 383 384 385 386 387
+no rotamers for res2 ACP
+HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5   
+consider orbitals for atom 1  O1 
+acceptor orbitals, index: 1 atom:  O1  orbitals: [3, 4]
+donor atoms:  HH , 
+donor nchi: 3
+donor num rots: 22
+acceptor num rots: 1
+N hbond geom samples: 7735
+total raw samples: 340340
+====================================================================================================================================================================================================================================
+============ Thread 110 generating hotspot geometries GLN ACP =======================================
+==================================================================================================================
+
+============ Thread 74 generating hotspot geometries HIS ACP =======================================
+==================================================================================================================
+==================================================================================================================
+============ Thread 62 generating hotspot geometries TYR ACP =======================================
+==================================================================================================================
+-----ASN-----ACP
+-----ARG-----ACP
+----done-----
+-----THR-----ACP
+----done-----
+-----SER-----ACP
+found ACP in exemplars
+adding rotamers res1 ASN 154-166 154 155 156 157 158 159 160 161 162 163 164 165 166
+no rotamers for res2 ACP
+found ACP in exemplars
+HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5   
+consider orbitals for atom 1  O1 
+acceptor orbitals, index: 1 atom:  O1  orbitals: [3, 4]
+donor atoms: 1HD2, 2HD2, 
+donor nchi: 2
+donor num rots: 13
+acceptor num rots: 1
+N hbond geom samples: 7735
+total raw samples: 402220
+----done-----
+----done-----
+adding rotamers res1 ARG 194-235 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235
+no rotamers for res2 ACP
+found found ACPACP in exemplars
+ in exemplars
+HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5   
+consider orbitals for atom 1  O1 
+acceptor orbitals, index: 1 atom:  O1  orbitals: [3, 4]
+donor atoms:  HE , 1HH1, 2HH1, 1HH2, 2HH2, 
+donor nchi: 4
+donor num rots: 42
+acceptor num rots: 1
+N hbond geom samples: 7735
+total raw samples: 3248700
+==================================================================================================================
+============ Thread 205 generating hotspot geometries ASN ACP =======================================
+==================================================================================================================
+adding rotamers res1 adding rotamers res1 SERTHR 290-343  290236-289 236  291237  238292 239 293 240 294 241 295 242 296 297 243 298 244 299 245 300 246 301 247 302 248 303 249 304 250 305 251 252 306 253 307  254308  309255 310 256 311 257 312 258 313 259 314 260 315 261 316 317 318  319262 320 263 321 264  265322 266 267 268 323 324 269 270 271 272  325273 326 274 327 275 328 276 329 277 330 278  331279  280332 281 333 282 334 283 335 284 285 336 286  337287  288338 289 339
+ 340no rotamers for res2 ACP
+ 341 342 343
+no rotamers for res2 ACP
+HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5   
+consider orbitals for atom 1  O1 
+HBondedPairGenerator: align atoms:  C5   C6   C7 
+1  C2   2  C1   3  O1   4  C8   5  C3   6  C4   7  C5   8  C6   9  C7   10  H6   11  H7   12  H8   13  H2   14  H3   15  H1   16  H4   17  H5   
+consider orbitals for atom 1  O1 
+acceptor orbitals, index: 1 atom:  O1  orbitals: [3, 4]
+donor atoms:  HG1, 
+acceptor orbitals, index: donor nchi: 2
+1 atom: donor num rots: 54
+acceptor num rots: 1
+N hbond geom samples: 7735
+total raw samples: 835380
+ O1  orbitals: [3, 4]
+donor atoms:  HG , 
+donor nchi: 2
+donor num rots: 54
+acceptor num rots: 1
+N hbond geom samples: 7735
+total raw samples: 835380
+==================================================================================================================
+============ Thread 11 generating hotspot geometries ARG ACP =======================================
+==================================================================================================================
+==================================================================================================================
+============================================================================================================================== Thread 210 generating hotspot geometries SER ACP =======================================
+==================================================================================================================
+
+============ Thread 177 generating hotspot geometries THR ACP =======================================
+==================================================================================================================
+Thread 210 Samples SER -> ACP fix_acceptor 100.000K of at most 835.380K progress:  11.9705%
+Thread 177 Samples THR -> ACP fix_acceptor 100.000K of at most 835.380K progress:  11.9705%
+Thread 205 Samples ASN -> ACP fix_acceptor 100.000K of at most 402.220K progress:  24.8618%
+Thread 74 Samples HIS -> ACP fix_acceptor 100.000K of at most 216.580K progress:  46.1719%
+Thread 110 Samples GLN -> ACP fix_acceptor 100.000K of at most 773.500K progress:  12.9281%
+Thread 62 Samples TYR -> ACP fix_acceptor 100.000K of at most 340.340K progress:  29.3821%
+Thread 149 Samples LYS -> ACP fix_acceptor 100.000K of at most   1.439M progress:  6.9506%
+Thread 11 Samples ARG -> ACP fix_acceptor 100.000K of at most   3.249M progress:  3.07812%
+Thread 210 Samples SER -> ACP fix_acceptor 200.000K of at most 835.380K progress:  23.9411%
+Thread 177 Samples THR -> ACP fix_acceptor 200.000K of at most 835.380K progress:  23.9411%
+Thread 205 Samples ASN -> ACP fix_acceptor 200.000K of at most 402.220K progress:  49.7238%
+Thread 74 Samples HIS -> ACP fix_acceptor 200.000K of at most 216.580K progress:  92.3442%
+Thread 110 Samples GLN -> ACP fix_acceptor 200.000K of at most 773.500K progress:  25.8564%
+total HIS ACP 216.580K
+SAVING 216.580K HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots14__ACC_HIS-ACP__ACP.rel_rot_pos.gz
+216580
+Thread 62 Samples TYR -> ACP fix_acceptor 200.000K of at most 340.340K progress:  58.7645%
+Thread 149 Samples LYS -> ACP fix_acceptor 200.000K of at most   1.439M progress:  13.9013%
+Thread 11 Samples ARG -> ACP fix_acceptor 200.000K of at most   3.249M progress:  6.15628%
+Thread 210 Samples SER -> ACP fix_acceptor 300.000K of at most 835.380K progress:  35.9117%
+Thread 177 Samples THR -> ACP fix_acceptor 300.000K of at most 835.380K progress:  35.9117%
+Thread 205 Samples ASN -> ACP fix_acceptor 300.000K of at most 402.220K progress:  74.5858%
+Thread 110 Samples GLN -> ACP fix_acceptor 300.000K of at most 773.500K progress:  38.7846%
+Thread 149 Samples LYS -> ACP fix_acceptor 300.000K of at most   1.439M progress:  20.8519%
+Thread 62 Samples TYR -> ACP fix_acceptor 300.000K of at most 340.340K progress:  88.1469%
+Thread 210 Samples SER -> ACP fix_acceptor 400.000K of at most 835.380K progress:  47.8823%
+Thread 177 Samples THR -> ACP fix_acceptor 400.000K of at most 835.380K progress:  47.8823%
+Thread 11 Samples ARG -> ACP fix_acceptor 300.000K of at most   3.249M progress:  9.23443%
+Thread 205 Samples ASN -> ACP fix_acceptor 400.000K of at most 402.220K progress:  99.4478%
+total ASN ACP 402.220K
+SAVING 402.220K HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots13__ACC_ASN-ACP__ACP.rel_rot_pos.gz
+402220
+total TYR ACP 340.340K
+SAVING 340.340K HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots22__ACC_TYR-ACP__ACP.rel_rot_pos.gz
+340340
+Thread 110 Samples GLN -> ACP fix_acceptor 400.000K of at most 773.500K progress:  51.7129%
+Thread 210 Samples SER -> ACP fix_acceptor 500.000K of at most 835.380K progress:  59.8529%
+Thread 149 Samples LYS -> ACP fix_acceptor 400.000K of at most   1.439M progress:  27.8026%
+Thread 177 Samples THR -> ACP fix_acceptor 500.000K of at most 835.380K progress:  59.8529%
+Thread 110 Samples GLN -> ACP fix_acceptor 500.000K of at most 773.500K progress:  64.6411%
+Thread 11 Samples ARG -> ACP fix_acceptor 400.000K of at most   3.249M progress:  12.3126%
+Thread 210 Samples SER -> ACP fix_acceptor 600.000K of at most 835.380K progress:  71.8235%
+Thread 177 Samples THR -> ACP fix_acceptor 600.000K of at most 835.380K progress:  71.8235%
+Thread 149 Samples LYS -> ACP fix_acceptor 500.000K of at most   1.439M progress:  34.7533%
+Thread 110 Samples GLN -> ACP fix_acceptor 600.000K of at most 773.500K progress:  77.5694%
+Thread 210 Samples SER -> ACP fix_acceptor 700.000K of at most 835.380K progress:  83.7941%
+Thread 177 Samples THR -> ACP fix_acceptor 700.000K of at most 835.380K progress:  83.7941%
+Thread 11 Samples ARG -> ACP fix_acceptor 500.000K of at most   3.249M progress:  15.3907%
+Thread 149 Samples LYS -> ACP fix_acceptor 600.000K of at most   1.439M progress:  41.704%
+Thread 110 Samples GLN -> ACP fix_acceptor 700.000K of at most 773.500K progress:  90.4976%
+Thread 210 Samples SER -> ACP fix_acceptor 800.000K of at most 835.380K progress:  95.7647%
+Thread 177 Samples THR -> ACP fix_acceptor 800.000K of at most 835.380K progress:  95.7647%
+total SER ACP 835.380K
+SAVING 835.380K HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots54__ACC_SER-ACP__ACP.rel_rot_pos.gz
+835380
+total THR ACP 835.380K
+SAVING 835.380K HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots54__ACC_THR-ACP__ACP.rel_rot_pos.gz
+835380
+Thread 11 Samples ARG -> ACP fix_acceptor 600.000K of at most   3.249M progress:  18.4689%
+Thread 149 Samples LYS -> ACP fix_acceptor 700.000K of at most   1.439M progress:  48.6546%
+total GLN ACP 773.500K
+SAVING 773.500K HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots25__ACC_GLN-ACP__ACP.rel_rot_pos.gz
+773500
+Thread 149 Samples LYS -> ACP fix_acceptor 800.000K of at most   1.439M progress:  55.6053%
+Thread 11 Samples ARG -> ACP fix_acceptor 700.000K of at most   3.249M progress:  21.547%
+Thread 149 Samples LYS -> ACP fix_acceptor 900.000K of at most   1.439M progress:  62.556%
+Thread 11 Samples ARG -> ACP fix_acceptor 800.000K of at most   3.249M progress:  24.6252%
+Thread 149 Samples LYS -> ACP fix_acceptor   1.000M of at most   1.439M progress:  69.5066%
+Thread 11 Samples ARG -> ACP fix_acceptor 900.000K of at most   3.249M progress:  27.7034%
+Thread 149 Samples LYS -> ACP fix_acceptor   1.100M of at most   1.439M progress:  76.4573%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.000M of at most   3.249M progress:  30.7815%
+Thread 149 Samples LYS -> ACP fix_acceptor   1.200M of at most   1.439M progress:  83.408%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.100M of at most   3.249M progress:  33.8597%
+Thread 149 Samples LYS -> ACP fix_acceptor   1.300M of at most   1.439M progress:  90.3587%
+Thread 149 Samples LYS -> ACP fix_acceptor   1.400M of at most   1.439M progress:  97.3093%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.200M of at most   3.249M progress:  36.9378%
+total LYS ACP   1.439M
+SAVING   1.439M HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots31__ACC_LYS-ACP__ACP.rel_rot_pos.gz
+1438710
+Thread 11 Samples ARG -> ACP fix_acceptor   1.300M of at most   3.249M progress:  40.016%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.400M of at most   3.249M progress:  43.0941%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.500M of at most   3.249M progress:  46.1723%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.600M of at most   3.249M progress:  49.2504%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.700M of at most   3.249M progress:  52.3286%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.800M of at most   3.249M progress:  55.4067%
+Thread 11 Samples ARG -> ACP fix_acceptor   1.900M of at most   3.249M progress:  58.4849%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.000M of at most   3.249M progress:  61.5631%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.100M of at most   3.249M progress:  64.6412%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.200M of at most   3.249M progress:  67.7194%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.300M of at most   3.249M progress:  70.7975%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.400M of at most   3.249M progress:  73.8757%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.500M of at most   3.249M progress:  76.9538%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.600M of at most   3.249M progress:  80.032%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.700M of at most   3.249M progress:  83.1101%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.800M of at most   3.249M progress:  86.1883%
+Thread 11 Samples ARG -> ACP fix_acceptor   2.900M of at most   3.249M progress:  89.2664%
+Thread 11 Samples ARG -> ACP fix_acceptor   3.000M of at most   3.249M progress:  92.3446%
+Thread 11 Samples ARG -> ACP fix_acceptor   3.100M of at most   3.249M progress:  95.4228%
+Thread 11 Samples ARG -> ACP fix_acceptor   3.200M of at most   3.249M progress:  98.5009%
+total ARG ACP   3.249M
+SAVING   3.249M HBOND GEOMETRIES TO ./cache_dir/__HBOND_GEOMS__maxtip60__resl6__range360__ex1_0__ex2_0__ex3_0__ex4_0__nrots42__ACC_ARG-ACP__ACP.rel_rot_pos.gz
+3248700
+
+RifGenSimpHB:    1 ACC_SER-ACP__ACP     done, ngeom: 835.380K job    0 of 8  <>RIFAccum nrots:   0.000  mem: 524.288K rif_mem:   2.048K
+RifGenSimpHB:    1 ACC_THR-ACP__ACP     done, ngeom: 835.380K job    1 of 8  <>RIFAccum nrots:   4.805M mem: 524.288K rif_mem: 134.218M
+RifGenSimpHB:    1 ACC_ARG-ACP__ACP     done, ngeom:   3.249M job    2 of 8  <>RIFAccum nrots:   4.805M mem: 524.288K rif_mem: 134.218M
+RifGenSimpHB:    1 ACC_LYS-ACP__ACP     done, ngeom:   1.439M job    3 of 8  <>RIFAccum nrots:   4.805M mem: 524.288K rif_mem: 134.218M
+RifGenSimpHB:    1 ACC_GLN-ACP__ACP     done, ngeom: 773.500K job    4 of 8  <>RIFAccum nrots:   4.805M mem: 524.288K rif_mem: 134.218M
+RifGenSimpHB:    1 ACC_TYR-ACP__ACP     done, ngeom: 340.340K job    5 of 8  <>RIFAccum nrots:   4.805M mem: 524.288K rif_mem: 134.218M
+RifGenSimpHB:    1 ACC_HIS-ACP__ACP     done, ngeom: 216.580K job    6 of 8  <>RIFAccum nrots:   4.805M mem: 524.288K rif_mem: 134.218M
+RifGenSimpHB:    1 ACC_ASN-ACP__ACP     done, ngeom: 402.220K job    7 of 8  <>RIFAccum nrots:   4.805M mem: 524.288K rif_mem: 134.218M
+================== ApoHSearch rotamer 0 ALA chis:  ================== Progress: 1 of 11 0% ==================
+RifGeneratorApoHSearch: add child rotamers: ALA0
+NEST info base resl: 1.73205 1.73205 1.73205  40.6567
+Hstage: 0 resl: 3.00 nsamp: 384.384K *************************************************** branching: -2.958352 to -0.500000
+Hstage: 1 resl: 1.50 nsamp:   7.376M *************************************************** branching: -2.958352 to -0.500000
+Hstage: 2 resl: 0.75 nsamp: 248.089M **************************************************
+SCOREINFO ALA min:  -2.845 cut: -.2 avg:  -0.734 nsamp 224.600M
+<>RIFAccum nrots: 145.090M mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 344 VAL chis:  63 ================== Progress: 2 of 11 9.09091% ==================
+RifGeneratorApoHSearch: add child rotamers: VAL344 VAL345 VAL346
+NEST info base resl: 1.73205 1.73205 1.73205  35.0055
+Hstage: 0 resl: 3.00 nsamp:   1.297M *************************************************** branching: -2.836028 to -0.800000
+Hstage: 1 resl: 1.50 nsamp:  18.377M *************************************************** branching: -2.836028 to -0.800000
+Hstage: 2 resl: 0.75 nsamp: 495.217M **********************************<>****************
+SCOREINFO VAL min:  -2.659 cut: -.8 avg:  -0.847 nsamp 441.094M
+<>RIFAccum nrots: 681.258M mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 88 ILE chis:  62 100 ================== Progress: 3 of 11 18.1818% ==================
+RifGeneratorApoHSearch: add child rotamers: ILE88 ILE92
+NEST info base resl: 1.73205 1.73205 1.73205  29.7177
+Hstage: 0 resl: 3.00 nsamp:   1.297M *************************************************** branching: -2.751376 to -1.360000
+Hstage: 1 resl: 1.50 nsamp:   9.382M *************************************************** branching: -2.724430 to -1.360000
+Hstage: 2 resl: 0.75 nsamp: 155.615M **************************************************
+SCOREINFO ILE min:  -2.537 cut: -1. avg:  -1.193 nsamp 136.184M
+<>RIFAccum nrots: 739.340M mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 89 ILE chis:  62 170 ================== Progress: 4 of 11 27.2727% ==================
+RifGeneratorApoHSearch: add child rotamers: ILE89 ILE93
+NEST info base resl: 1.73205 1.73205 1.73205  27.1425
+Hstage: 0 resl: 3.00 nsamp:   1.297M *************************************************** branching: -2.751376 to -1.360000
+Hstage: 1 resl: 1.50 nsamp:   9.298M ************************************************** branching: -2.751376 to -1.360000
+Hstage: 2 resl: 0.75 nsamp: 163.131M **************************************************
+SCOREINFO ILE min:  -2.539 cut: -1. avg:  -1.192 nsamp 143.423M
+<>RIFAccum nrots: 803.536M mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 90 ILE chis:  -177 66 ================== Progress: 5 of 11 36.3636% ==================
+RifGeneratorApoHSearch: add child rotamers: ILE90
+NEST info base resl: 1.73205 1.73205 1.73205  27.4555
+Hstage: 0 resl: 3.00 nsamp:   1.297M *************************************************** branching: -2.751376 to -1.360000
+Hstage: 1 resl: 1.50 nsamp:   9.174M *************************************************** branching: -2.694276 to -1.360000
+Hstage: 2 resl: 0.75 nsamp: 155.006M **************************************************
+SCOREINFO ILE min:  -2.529 cut: -1. avg:  -1.191 nsamp 135.896M
+<>RIFAccum nrots: 831.731M mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 91 ILE chis:  -177 165 ================== Progress: 6 of 11 45.4545% ==================
+RifGeneratorApoHSearch: add child rotamers: ILE91
+NEST info base resl: 1.73205 1.73205 1.73205  25.3094
+Hstage: 0 resl: 3.00 nsamp:   3.075M *************************************************** branching: -2.751376 to -1.360000
+Hstage: 1 resl: 1.50 nsamp:  21.759M *************************************************** branching: -2.751376 to -1.360000
+Hstage: 2 resl: 0.75 nsamp: 386.723M **************************************************
+SCOREINFO ILE min:  -2.536 cut: -1. avg:  -1.188 nsamp 340.411M
+<>RIFAccum nrots: 908.539M mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 94 ILE chis:  -57 -60 ================== Progress: 7 of 11 54.5455% ==================
+RifGeneratorApoHSearch: add child rotamers: ILE94
+NEST info base resl: 1.73205 1.73205 1.73205  26.7486
+Hstage: 0 resl: 3.00 nsamp:   1.297M *************************************************** branching: -2.751376 to -1.360000
+Hstage: 1 resl: 1.50 nsamp:   9.296M *************************************************** branching: -2.751376 to -1.360000
+Hstage: 2 resl: 0.75 nsamp: 163.821M **************************************************
+SCOREINFO ILE min:  -2.539 cut: -1. avg:  -1.193 nsamp 144.175M
+<>RIFAccum nrots: 939.885M mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 126 LEU chis:  62 80 ================== Progress: 8 of 11 63.6364% ==================
+RifGeneratorApoHSearch: add child rotamers: LEU126 LEU127 LEU128 LEU129 LEU130 LEU131 LEU132 LEU133 LEU134
+NEST info base resl: 1.73205 1.73205 1.73205  24.7122
+Hstage: 0 resl: 3.00 nsamp:   3.075M *************************************************** branching: -2.751376 to -1.200000
+Hstage: 1 resl: 1.50 nsamp:  26.197M *************************************************** branching: -2.751376 to -1.200000
+Hstage: 2 resl: 0.75 nsamp: 516.086M ***************************<>************<>***********
+SCOREINFO LEU min:  -2.563 cut: -1. avg:  -1.099 nsamp 455.681M
+<>RIFAccum nrots:   2.062G mem: 524.288K rif_mem:   4.295G
+================== ApoHSearch rotamer 45 PHE chis:  62 79 ================== Progress: 9 of 11 72.7273% ==================
+RifGeneratorApoHSearch: add child rotamers: PHE45 PHE46 PHE47 PHE48 PHE49 PHE50 PHE51 PHE52 PHE53 PHE54 PHE55 PHE56 PHE57 PHE58 PHE59
+NEST info base resl: 1.73205 1.73205 1.73205  19.6933
+Hstage: 0 resl: 3.00 nsamp:   6.006M ************************************************** branching: -4.336715 to -2.240000
+Hstage: 1 resl: 1.50 nsamp:  44.110M *************************************************** branching: -4.271954 to -2.240000
+Hstage: 2 resl: 0.75 nsamp: 730.589M ******************<>*********<>********<>***************
+SCOREINFO PHE min:  -4.003 cut: -2. avg:  -1.933 nsamp 618.498M
+<>RIFAccum nrots:   4.229G mem: 524.288K rif_mem:   8.590G
+================== ApoHSearch rotamer 366 TYR chis:  62 73 0 ================== Progress: 10 of 11 81.8182% ==================
+RifGeneratorApoHSearch: add child rotamers: TYR366 TYR367 TYR368 TYR369 TYR370 TYR371 TYR372 TYR373 TYR374 TYR375 TYR376 TYR377 TYR378 TYR379 TYR380 TYR381 TYR382 TYR383 TYR384 TYR385 TYR386 TYR387
+NEST info base resl: 1.73205 1.73205 1.73205  18.1161
+Hstage: 0 resl: 3.00 nsamp:   6.006M ************************************************** branching: -5.021414 to -2.240000
+Hstage: 1 resl: 1.50 nsamp:  52.075M *************************************************** branching: -4.844283 to -2.240000
+Hstage: 2 resl: 0.75 nsamp: 904.594M ******************<>*********<>********<>*********<>******
+SCOREINFO TYR min:  -4.477 cut: -2. avg:  -1.986 nsamp 745.523M
+<>RIFAccum nrots:   8.599G mem: 524.288K rif_mem:   8.590G
+================== ApoHSearch rotamer 347 TRP chis:  62 -100 ================== Progress: 11 of 11 90.9091% ==================
+RifGeneratorApoHSearch: add child rotamers: TRP347 TRP348 TRP349 TRP350 TRP351 TRP352 TRP353 TRP354 TRP355 TRP356 TRP357 TRP358 TRP359 TRP360 TRP361 TRP362 TRP363 TRP364 TRP365
+NEST info base resl: 1.73205 1.73205 1.73205  18.1136
+Hstage: 0 resl: 3.00 nsamp:   6.006M ************************************************** branching: -6.266970 to -2.720000
+Hstage: 1 resl: 1.50 nsamp:  53.598M *************************************************** branching: -5.984843 to -2.720000
+Hstage: 2 resl: 0.75 nsamp: 873.182M **************<>*******<>*******<>****<>*****<>*************
+SCOREINFO TRP min:  -5.471 cut: -3. avg:  -2.338 nsamp 700.030M
+<>RIFAccum nrots:  11.775G mem: 524.288K rif_mem:   8.590G
+RifGenerators done
+RIFAccumulator building rif....
+RIF:  non0 in RIF:  41.512M N_motifs_found:  11.775G coverage: 283.658, mem_use:   8.590G
+RIF size:   8.590G load: 0.309289, sizeof(value_type) 64
+sorting rotamers in each hash entry
+RIF  non0 in RIF:  41.512M N_motifs_found:  11.775G coverage: 283.658
+======================= frac collisions in map =======================
+======================= cart: 0.7, ori: 14 =======================
+======================================================================
+   Nrots   1 1.00000  -2.385 41512084
+   Nrots   2 0.71790  -2.656 29801425
+   Nrots   3 0.61196  -2.583 25403877
+   Nrots   4 0.53587  -2.459 22245089
+   Nrots   5 0.46659  -2.529 19369161
+   Nrots   6 0.43292  -2.512 17971535
+   Nrots   7 0.40167  -2.485 16674325
+   Nrots   8 0.37495  -2.471 15564930
+   Nrots   9 0.35112  -2.456 14575544
+   Nrots  10 0.32572  -2.422 13521380
+   Nrots  11 0.30382  -2.399 12612325
+   Nrots  12 0.28433  -2.366 11803253
+   Nrots  13 0.26517  -2.290 11007780
+   Nrots  14 0.24676  -2.240 10243481
+E(collisions) = 6.31879
+======================================================================
+XformHash_bt24_BCC6
+before resize, RIF size:   8.590G load: 0.309289, sizeof(value_type) 64
+NOT RESIZING RIF
+dumping rif to: /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz
+===================================== rif description ======================================
+from Will's rifgen app
+rotamer set size : 1654
+rotamer nprimary : 388
+          target : ACP.pdb
+      target_res : 1 
+          apores : ALA VAL ILE LEU PHE TYR TRP 
+          donres : SER THR TYR ASN GLN ARG HIS LYS 
+          accres : SER THR TYR HIS ASN GLN ACP 
+       beam_size :  10.000G
+    value stored : RotamerScores< N=14, RotamerScoreSat< dsize=2, rbit=9, div=-4, nsat=2 > >
+apo_search_resls : 3 1.5 0.75 
+ score_cut_adjust...............0.80000000000000004
+ score_threshold................-0.5
+ hbond_weight...................2
+ upweight_multi_hbond...........0
+ tip_tol_deg....................60
+ rot_samp_range.................360
+ rot_samp_resl..................6
+ hbond_cart_sample_hack_range...0.33000000000000002
+ hbond_cart_sample_hack_resl....0.33000000000000002
+ rosetta_field_resl.............0.25
+ max_rf_bounding_ratio..........4
+ rf_oversample..................2
+ hash_cart_resl.................0.69999999999999996
+ hash_angle_resl................14
+       RIF cells :  41.512M
+  Nrots inserted :  11.775G
+        coverage : 283.657562
+
+============================================================================================
+writing rif file /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz
+make_bounding_gird: cart 16 / 16, ang: 38.8446 / 38.8
+    new map size   5.771K ratio: 0.00013902
+    mem:   1.049M load: 0.352234, sizeof(value_type) 64
+make_bounding_gird: cart 8 / 8, ang: 24.4 / 24.4
+    new map size  66.033K ratio: 0.00159069
+    mem:  16.777M load: 0.251896, sizeof(value_type) 64
+make_bounding_gird: cart 4 / 4, ang: 17.2 / 17.2
+    new map size 404.789K ratio: 0.00975111
+    mem:  67.109M load: 0.386037, sizeof(value_type) 64
+make_bounding_gird: cart 2 / 2, ang: 13.6 / 13.6
+    new map size   2.934M ratio: 0.0706744
+    mem: 536.871M load: 0.349741, sizeof(value_type) 64
+make_bounding_gird: cart 1 / 1, ang: 11.8 / 11.8
+    new map size  19.505M ratio: 0.469871
+    mem:   4.295G load: 0.290652, sizeof(value_type) 64
+done writing
+NOT DELETING VoxelArrayPtr's, should use smart ptrs!
+rif_hier_DONE
+########################################### what you need for docking ###########################################
+-rif_dock:target_pdb            /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_target.pdb.gz
+-in:file:extra_res_fa           ACP.params
+-rif_dock:target_rf_resl        0.25
+-rif_dock:target_rf_cache       /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_16.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_08.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_04.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_02.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_01.xmap.gz
+-rif_dock:target_rif            /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz
+-rif_dock:target_donors         /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_donors.pdb.gz
+-rif_dock:target_acceptors      /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_acceptors.pdb.gz
+-rif_dock:extra_rotamers        1
+-rif_dock:extra_rif_rotamers    1
+-rif_dock:rot_spec_fname        /data2/liyunhao/New_tSCA/RifGen/output/rotamer_index_spec.txt
+#################################################################################################################

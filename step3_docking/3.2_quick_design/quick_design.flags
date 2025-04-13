@@ -1,0 +1,15 @@
+-nstruct 1
+-beta #use genpot
+-run:preserve_header true
+-dunbrack_prob_buried 0.8 
+-dunbrack_prob_nonburied 0.8 
+-dunbrack_prob_buried_semi 0.8 
+-dunbrack_prob_nonburied_semi 0.8
+-holes:dalphaball /software/rosetta/DAlphaBall.gcc
+-mute protocols.rosetta_scripts.ParsedProtocol.REPORT  #make rescore faster
+-extra_res /data2/liyunhao/New_tSCA/quick_design/params/ACP.params
+-precompute_ig
+-parser:protocol /data2/liyunhao/New_tSCA/quick_design/scripts/quick_design.xml
+-out:path:pdb /data2/liyunhao/New_tSCA/quick_design/output
+-out:path:score /data2/liyunhao/New_tSCA/quick_design/score
+-write_all_connect_info

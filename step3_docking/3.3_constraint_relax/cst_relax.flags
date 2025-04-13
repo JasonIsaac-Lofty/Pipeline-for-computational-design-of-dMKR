@@ -1,0 +1,7 @@
+-parser:protocol /data2/liyunhao/New_tSCA/Constraint_relax/scripts/cst.xml
+-out:path:pdb /data2/liyunhao/New_tSCA/Constraint_relax/output
+-out:path:score /data2/liyunhao/New_tSCA/Constraint_relax/score
+-extra_res_fa /data2/liyunhao/New_tSCA/quick_design/params/ACP.params
+-write_all_connect_info
+-precompute_ig true
+-run:preserve_header true

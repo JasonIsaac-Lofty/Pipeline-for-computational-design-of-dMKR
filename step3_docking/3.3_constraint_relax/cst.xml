@@ -1,0 +1,47 @@
+<ROSETTASCRIPTS>
+
+    <SCOREFXNS>
+        <ScoreFunction name="ref_design" weights="ref2015">
+			<Reweight scoretype="res_type_constraint" weight="0.3"/>
+	        <Reweight scoretype="arg_cation_pi" weight="3"/>
+			<Reweight scoretype="approximate_buried_unsat_penalty" weight="5"/>
+			<Set approximate_buried_unsat_penalty_burial_atomic_depth="3.5"/>
+			<Set approximate_buried_unsat_penalty_hbond_energy_threshold="-0.5"/>
+			<Set approximate_buried_unsat_penalty_hbond_bonus_cross_chain="-1"/>
+			<Reweight scoretype="atom_pair_constraint" weight="0.3"/>
+			<Reweight scoretype="dihedral_constraint" weight="0.1"/>
+			<Reweight scoretype="angle_constraint" weight="0.1"/>
+		</ScoreFunction>
+
+		<ScoreFunction name="ref_cart" weights="ref2015_cart">
+            <Reweight scoretype="coordinate_constraint" weight="1.0" />
+            <Reweight scoretype="res_type_constraint" weight="1.0" />
+            <Reweight scoretype="atom_pair_constraint" weight="1.0" />
+            <Reweight scoretype="angle_constraint" weight="1.0" />
+            <Reweight scoretype="dihedral_constraint" weight="1.0" />
+        </ScoreFunction>
+		
+	</SCOREFXNS>
+
+    <RESIDUE_SELECTORS>
+        <Chain name="protein" chains="A"/>
+        <Chain name="ligand" chains="B" />
+    </RESIDUE_SELECTORS>
+
+    <MOVERS>
+        <ConstraintSetMover name="cst" add_constraints="true" cst_file="%%cst_file%%"/>
+        <FastRelax name="fastRelax" scorefxn="ref_cart" repeats="3" cartesian="True" bondangle="False" bondlength="False" min_type="lbfgs_armijo_nonmonotone">
+            <MoveMap>
+				<Chain number="1" chi="true" bb="true"/>
+				<Chain number="2" chi="true" bb="false"/>
+				<Jump  number="1" setting="true"/>
+			</MoveMap>
+        </FastRelax>	
+    </MOVERS>
+
+	<PROTOCOLS>
+		<Add mover="cst"/>
+        <Add mover="fastRelax"/> 
+    </PROTOCOLS>
+
+</ROSETTASCRIPTS>

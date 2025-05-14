@@ -1,4 +1,4 @@
-# Overall design pipeline of kSCA
+# Overall design pipeline of dMKR
 Yunhao Li, PhD student (Department of Chemistry, Zhejiang University)<br>
 
 12237050@zju.edu.cn

@@ -1,0 +1,39 @@
+#!/bin/bash
+# Example cmd for step3, remember to change all paths in example files and flags
+
+RIFDOCK="/home/liyunhao/rosetta_src_2018.09.60072_bundle/main/source/rifdock/build/apps/rosetta"
+ROSETTA="/home/liyunhao/Rosetta/main/source/bin"
+METAL3D="/data/liyunhao/software/Metal3D/metal-site-prediction-main/Metal3D"
+
+# 3.0 RIFGen
+cd 3.0_rifgen
+"$RIFDOCK"/rifgen @rifgen_ACP.flags > rifgen.log 
+
+# 3.1 RIFDock
+cd ../3.1_rifdock
+"$RIFDOCK"/rif_dock_test @rifdock_ACP.flags \
+    -scaffolds dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2.pdb \
+    -scaffold_res dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2.pos
+
+# 3.2 Quick_design
+cd ../3.2_quick_design
+"$ROSETTA"/rosetta_scripts.mpi.linuxgccrelease \
+    @quick_design.flags \
+    -s dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2_000000001 \
+    -parser:script_vars lig_res=131 cat_res=42,44,54,61,84,85
+
+# 3.3 Constraint_relax
+cd ../3.3_constraint_relax
+"$ROSETTA"/rosetta_scripts.mpi.linuxgccrelease \
+    @cst_relax.flags \
+    -s dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2_000000001_0001.pdb \
+    -parser:script_vars cst_file=dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2_000000001_0001.cst
+
+# 3.4 Metal_site_prediction
+cd ../3.4_metal_site_prediction
+python "$METAL3D"/metal3d.py \
+    --pdb input/dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2_000000001_0001_0001 \
+    --metalbinding \
+    --writeprobes \
+    --probefile dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2_000000001_0001_0001_Zn.pdb \
+    --maxp

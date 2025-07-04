@@ -1,0 +1,118 @@
+########################### what you need for docking ###########################
+# Fill this in with the output from the log file of RifGen
+-rif_dock:target_pdb            /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_target.pdb.gz
+-in:file:extra_res_fa           /data2/liyunhao/New_tSCA/RifDock/params/ACP.params
+-rif_dock:target_rf_resl        0.25
+-rif_dock:target_rf_cache       /data2/liyunhao/New_tSCA/RifGen/output/__RF_ACP.pdb_CEN_trhash54435770_resl0.25_osamp2_replonlybdry
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_16.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_08.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_04.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_02.xmap.gz
+-rif_dock:target_bounding_xmaps /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_BOUNDING_RIF_01.xmap.gz
+-rif_dock:target_rif            /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz
+-rif_dock:target_donors         /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_donors.pdb.gz
+-rif_dock:target_acceptors      /data2/liyunhao/New_tSCA/RifGen/output/rifgen_output.rif.gz_acceptors.pdb.gz
+-rif_dock:extra_rotamers        1
+-rif_dock:extra_rif_rotamers    1
+-rif_dock:rot_spec_fname        /data2/liyunhao/New_tSCA/RifGen/output/rotamer_index_spec.txt
+############################### Constant paths ################################
+
+# Change the -database and -rifdock:rotrf_cache_dir to paths appropriate on your system.
+
+-database /home/liyunhao/rosetta_src_2018.09.60072_bundle/main/database
+
+# A cache directory. Populated on the first-run and then never changes.
+-rif_dock:rotrf_cache_dir /data2/liyunhao/New_tSCA/RifDock/cache
+
+############################ Flags that control output ############################
+
+-rif_dock:outdir  /data2/liyunhao/New_tSCA/RifDock/output/output                  
+-rif_dock:dokfile all.dok                 
+-rif_dock:n_pdb_out 50                    
+-rif_dock:redundancy_filter_mag 1.0       
+-rif_dock:align_output_to_scaffold true 
+-output_full_scaffold                 
+
+##################### Flags that affect runtime/search space ########################
+
+-beam_size_M 5                            
+-hsearch_scale_factor 1.2                
+-rif_dock:global_score_cut 0.0          
+
+
+################### Flags that affect how things are scored #########################
+
+-hbond_weight 2.0                          
+-upweight_multi_hbond 0.0                  
+-min_hb_quality_for_satisfaction -0.1      
+-scaff_bb_hbond_weight 2.0                
+-favorable_1body_multiplier 0.2            
+-favorable_1body_multiplier_cutoff 4       
+-favorable_2body_multiplier 5              
+-user_rotamer_bonus_constant 0             
+-user_rotamer_bonus_per_chi 0              
+-rif_dock:upweight_iface 2.0               
+
+################ stuff related to picking designable and fixed positions #################
+
+-scaffold_res_use_best_guess false
+-rif_dock::dont_use_scaffold_loops false
+-rif_dock:scaffold_to_ala false
+-rif_dock:scaffold_to_ala_selonly true
+-rif_dock:replace_all_with_ala_1bre false
+
+############################## HackPack options ###############################
+-hack_pack true                            
+-rif_dock:hack_pack_frac  0.1              
+
+########################## rosetta re-scoring / min stuff ###########################
+
+-rif_dock:rosetta_score_cut -10.0                    
+-rif_dock:rosetta_score_fraction 0.006               
+-rif_dock:rosetta_min_fraction 0.07                  
+-rif_dock:replace_orig_scaffold_res false            
+-rif_dock:rosetta_min_scaffoldbb false               
+-rif_dock:rosetta_min_targetbb   false               
+-rif_dock:rosetta_hard_min false                     
+-rif_dock:rosetta_min_at_least 30                    
+-rif_dock:rosetta_score_rifres_rifres_weight   0.6   
+-rif_dock:rosetta_score_rifres_scaffold_weight 0.4   
+
+####################### Special flags that do special things ########################
+
+-require_satisfaction    1                          
+-require_n_rifres  1                                
+-requirements 1
+
+###################### options to favor existing scaffold residues ####################
+
+-add_native_scaffold_rots_when_packing 0 # 1
+-bonus_to_native_scaffold_res          0 # -0.5
+
+############################# Twobody table caching ############################
+
+-rif_dock:cache_scaffold_data false
+-rif_dock:data_cache_dir  ./rifdock_scaffdata
+
+############################################################################
+#################### END OF USER ADJUSTABLE SETTINGS #####################
+############################################################################
+
+-beta
+-score:weights beta_soft
+-add_orbitals false
+-rif_dock:pack_n_iters    2
+-rif_dock:pack_iter_mult  2.0
+-rif_dock:packing_use_rif_rotamers        true
+-rif_dock:always_available_rotamers_level 0
+-rif_dock:rotrf_resl   0.25
+-rif_dock:rotrf_spread 0.0
+-rif_dock:rotrf_scale_atr 1.0
+-rif_dock::rf_resl 0.5
+-rif_dock::rf_oversample 2
+-rif_dock:use_scaffold_bounding_grids 0
+-rif_dock:target_rf_oversample 2
+-mute core.scoring.ScoreFunctionFactory
+-mute core.io.pose_from_sfr.PoseFromSFRBuilder
+
+############################################################################

@@ -1,0 +1,59 @@
+################################ File I/O flags ###############################
+
+-rifgen:target           ACP.pdb
+-tuning_file	         require_hb_ACP.txt
+-extra_res_fa            ACP.params
+-rifgen:outdir           /data2/liyunhao/New_tSCA/RifGen/output
+-rifgen:outfile          rifgen_output.rif.gz
+
+################################# RIF Flags ###################################
+
+-rifgen::rif_type RotScoreSat
+
+############################# Normal RIF Configuration ########################
+
+-rifgen:apores ALA VAL ILE LEU PHE TYR TRP
+-rifgen:donres SER THR TYR ASN GLN ARG HIS LYS
+-rifgen:accres SER THR TYR HIS ASN GLN ACP
+-rifgen:score_threshold -0.5 
+
+################################ General flags ################################
+
+-rifgen:hbond_weight 2.0           
+-min_hb_quality_for_satisfaction -0.25
+
+# Change this depending on the database of the Rosetta you compiled for RifDock
+-database /home/liyunhao/rosetta_src_2018.09.60072_bundle/main/database
+
+###############################################################################
+#################### END OF USER ADJUSTABLE SETTINGS ##########################
+###############################################################################
+
+-rifgen:extra_rotamers true
+-rifgen:extra_rif_rotamers true
+-rif_accum_scratch_size_M 24000
+-renumber_pdb
+-hash_cart_resl     0.7
+-hash_angle_resl    14.0   
+-rifgen::rosetta_field_resl 0.25
+-rifgen::search_resolutions 3.0 1.5 0.75
+# A cache directory. Populated on the first run and then never changes.
+-rifgen:data_cache_dir    ./cache_dir
+-rifgen:score_cut_adjust 0.8
+-hbond_cart_sample_hack_range 0.33
+-hbond_cart_sample_hack_resl  0.33
+-rifgen:tip_tol_deg        60.0 
+-rifgen:rot_samp_resl       6.0
+-rifgen:rif_hbond_dump_fraction  0.00001
+-rifgen:rif_apo_dump_fraction    0.000001
+-add_orbitals
+-rifgen:beam_size_M 10000.0
+-rifgen:hash_preallocate_mult 0.125
+-rifgen:max_rf_bounding_ratio 4.0
+-rifgen:hash_cart_resls   16.0   8.0   4.0   2.0   1.0
+-rifgen:hash_cart_bounds   512   512   512   512   512
+-rifgen:lever_bounds      16.0   8.0   4.0   2.0   1.0
+-rifgen:hash_ang_resls     38.8  24.4  17.2  13.6  11.8
+-rifgen:lever_radii        23.6 18.785501 13.324600  8.425850  4.855575
+
+###############################################################################

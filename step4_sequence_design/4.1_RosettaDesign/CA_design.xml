@@ -1,0 +1,129 @@
+<ROSETTASCRIPTS>
+    <SCOREFXNS>
+        <ScoreFunction name="ref_design" weights="ref2015">
+			<Reweight scoretype="res_type_constraint" weight="0.3"/>
+	        <Reweight scoretype="arg_cation_pi" weight="3"/>
+			<Reweight scoretype="approximate_buried_unsat_penalty" weight="5"/>
+			<Set approximate_buried_unsat_penalty_burial_atomic_depth="3.5"/>
+			<Set approximate_buried_unsat_penalty_hbond_energy_threshold="-0.5"/>
+			<Set approximate_buried_unsat_penalty_hbond_bonus_cross_chain="-1"/>
+			<Reweight scoretype="atom_pair_constraint" weight="0.3"/>
+			<Reweight scoretype="dihedral_constraint" weight="0.1"/>
+			<Reweight scoretype="angle_constraint" weight="0.1"/>
+		</ScoreFunction>
+
+        <ScoreFunction name="ref" weights="ref2015"/>
+
+        <ScoreFunction name="ref_soft" weights="ref2015">
+            <Reweight scoretype="fa_rep" weight="0.15" />
+       </ScoreFunction>
+
+       <ScoreFunction name="ref_cart" weights="ref2015_cart">
+            <Reweight scoretype="coordinate_constraint" weight="1.0" />
+            <Reweight scoretype="res_type_constraint" weight="1.0" />
+            <Reweight scoretype="atom_pair_constraint" weight="1.0" />
+            <Reweight scoretype="angle_constraint" weight="1.0" />
+            <Reweight scoretype="dihedral_constraint" weight="1.0" />
+        </ScoreFunction>
+
+    </SCOREFXNS>
+    
+    <RESIDUE_SELECTORS>
+        <Chain name="protein" chains="A"/>
+        <Chain name="ligand" chains="B" />
+        <InterfaceByVector name="interface_by_vector" cb_dist_cut="11" nearby_atom_cut="5.5" vector_angle_cut="75" vector_dist_cut="9" grp1_selector="protein" grp2_selector="ligand"/>
+        <Layer name="coreRes" select_core="true" use_sidechain_neighbors="true" core_cutoff="2.1" surface_cutoff="1.0"/>
+        <Index name="cat_res" resnums="%%cat_res%%"/>
+        <Index name="lig" resnums="%%lig_res%%" /> 
+        <ResidueName name="GP" residue_names="GLY,PRO" />
+        <Or name="interface_and_ligand" selectors="interface_by_vector,lig"/>
+        <Not name="notInterface_lig" selector="interface_and_ligand"/>
+        <Not name="not_GP" selector="GP" />
+    </RESIDUE_SELECTORS>
+    
+    <TASKOPERATIONS>
+        <IncludeCurrent name="ic" />
+        <InitializeFromCommandline name="ifcl" />
+        <RestrictAbsentCanonicalAAS name="noCys_Met" keep_aas="ADEFGHIKLNPQRSTVWY"/>
+        <PruneBuriedUnsats name="prune_buried_unsats" allow_even_trades="false" atomic_depth_cutoff="3.5" minimum_hbond_energy="-0.5"/>
+        <LimitAromaChi2 name="limitchi2" chi2max="110" chi2min="70" include_trp="True"/>
+        <ExtraRotamersGeneric name="ex1_ex2aro" ex1="1" ex2aro="1" />
+        <ProteinInterfaceDesign name="pack_long" design_chain1="0" design_chain2="0" jump="1" interface_distance_cutoff="15"/>	
+        <ProteinProteinInterfaceUpweighter name="upweight_interface" interface_weight="3" />
+        <OperateOnResidueSubset name="repack_cat_res" selector="cat_res"> 
+            <RestrictToRepackingRLT/>
+        </OperateOnResidueSubset>
+        <OperateOnResidueSubset name="repack_GP" selector="GP"> 
+			<RestrictToRepackingRLT/>
+		</OperateOnResidueSubset>
+        <OperateOnResidueSubset name="repack_interface_lig" selector="interface_and_ligand">
+            <RestrictToRepackingRLT/>
+        </OperateOnResidueSubset>
+        <OperateOnResidueSubset name="repack_not_interface_lig" selector="notInterface_lig">
+            <RestrictToRepackingRLT/>
+        </OperateOnResidueSubset>
+    </TASKOPERATIONS>
+    
+    <MOVERS>
+        <VirtualRoot name="virt_root_add" remove="0" removable="1" />
+		<VirtualRoot name="virt_root_rm"  remove="1" removable="1" />
+        <ConstraintSetMover name="cst" add_constraints="true" cst_file="%%cst_file%%"/>
+        <TaskAwareMinMover name="min" scorefxn="ref" bb="0" chi="1" task_operations="pack_long" />
+        <FastRelax name="fastRelax" scorefxn="ref_cart" repeats="1" cartesian="True" cst_file="%%cst_file%%" bondangle="False" bondlength="False" min_type="lbfgs_armijo_nonmonotone">
+            <MoveMap>
+				<Chain number="1" chi="true" bb="true"/>
+				<Chain number="2" chi="true" bb="false"/>
+				<Jump  number="1" setting="true"/>
+			</MoveMap>
+        </FastRelax>	
+        <FastDesign name="fastDesign_stage1" scorefxn="ref_design" repeats="1" task_operations="ic,ifcl,ex1_ex2aro,limitchi2,prune_buried_unsats,noCys_Met,upweight_interface,repack_cat_res,repack_not_interface_lig,repack_GP" batch="false" ramp_down_constraints="false" cartesian="False" bondangle="false" bondlength="false" min_type="dfpmin_armijo_nonmonotone" relaxscript="MonomerDesign2019"/> 
+        <FastDesign name="fastDesign_stage2" scorefxn="ref_design" repeats="3" task_operations="ic,ifcl,ex1_ex2aro,limitchi2,prune_buried_unsats,noCys_Met,upweight_interface,repack_cat_res,repack_not_interface_lig,repack_GP" batch="false" ramp_down_constraints="false" cartesian="False" bondangle="false" bondlength="false" min_type="dfpmin_armijo_nonmonotone" relaxscript="MonomerDesign2019"/>
+        <ClearConstraintsMover name="rm_csts" />
+        <PackRotamersMover name="hard_pack" scorefxn="ref_design"  task_operations="ic,ifcl,ex1_ex2aro,limitchi2,prune_buried_unsats,noCys_Met,upweight_interface,repack_cat_res,repack_interface_lig,repack_GP"/>
+        <TaskAwareMinMover name="soft_min" scorefxn="ref_soft" chi="1" bb="1" jump="1" tolerance="0.01" cartesian="false" task_operations="repack_not_interface_lig" />
+       	<TaskAwareMinMover name="hard_min" scorefxn="ref" chi="1" bb="1" jump="1" tolerance="0.01" cartesian="false" task_operations="repack_not_interface_lig" /> 
+        <ParsedProtocol name="short_repack_and_min">
+            <Add mover="hard_pack" />
+            <Add mover="soft_min" />
+            <Add mover="hard_min" />
+        </ParsedProtocol>
+    </MOVERS>
+
+    <FILTERS>
+        <ContactMolecularSurface name="contact_molecular_surface" distance_weight="0.5" target_selector="protein" binder_selector="ligand" confidence="0" />
+        <Ddg name="ddg_norepack"  threshold="0" jump="1" repeats="1" repack="0" relax_mover="min" confidence="0" scorefxn="ref"/>
+        <ScoreType name="totalscore" scorefxn="ref" threshold="0" confidence="1"/>
+        <ResidueCount name="nres" confidence="1" />
+        <CalculatorFilter name="res_totalscore" confidence="1" equation="SCORE/NRES" threshold="999">
+            <Var name="SCORE" filter_name="totalscore" />
+            <Var name="NRES" filter_name="nres" /> 
+        </CalculatorFilter>
+        <Sasa name="interface_buried_sasa" confidence="0" />
+        <DSasa name="dsasa" lower_threshold="0.0" upper_threshold="1.0"/>
+		<ShapeComplementarity name="shape_complementary" verbose="1" quick="0" jump="1" confidence="0"/>
+		<Holes name="hole" threshold="20.0" residue_selector="coreRes" exclude_bb_atoms="false" />
+		<SimpleHbondsToAtomFilter name="O1_hbond_fil" n_partners="1" hb_e_cutoff="-0.5" target_atom_name="O1" res_num="%%lig_res%%" scorefxn="ref" confidence="0"/>
+		<HbondsToResidue name="hbonds2lig" scorefxn="ref" partners="0" energy_cutoff="-0.5" backbone="0" bb_bb="0" sidechain="1" residue="%%lig_res%%"/>
+    </FILTERS>
+    
+    <PROTOCOLS>
+        <Add mover_name="virt_root_add" />
+        <Add mover="cst"/>
+		<Add mover="short_repack_and_min"/>
+        <Add mover="fastDesign_stage1"/> 
+        <Add mover="fastDesign_stage2"/> 
+        <Add mover="rm_csts"/>
+        <Add mover="fastRelax"/>
+        <Add filter="ddg_norepack"/>     
+        <Add filter="res_totalscore"/>
+        <Add filter="contact_molecular_surface"/>
+        <Add filter="interface_buried_sasa"/>
+        <Add filter="shape_complementary"/>
+        <Add filter="hole"/>
+    	<Add filter="O1_hbond_fil"/>
+        <Add filter="hbonds2lig"/>
+        <Add filter="dsasa"/>
+        <Add mover_name="virt_root_rm" />
+    </PROTOCOLS>
+
+</ROSETTASCRIPTS>

@@ -1,0 +1,7 @@
+-parser:protocol cst.xml
+-out:path:pdb /output
+-out:path:score /score
+-extra_res_fa ../../step1_ligand_conformation_search/params/ACP.params
+-write_all_connect_info
+-precompute_ig true
+-run:preserve_header true

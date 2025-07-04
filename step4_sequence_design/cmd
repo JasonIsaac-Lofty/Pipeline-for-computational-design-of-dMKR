@@ -1,0 +1,28 @@
+#!/bin/bash
+# Example cmd for step4, remember to change all paths in example files and flags
+
+ROSETTA="/home/liyunhao/Rosetta/main/source/bin"
+MPNN="/data/liyunhao/software/LigandMPNN-main"
+
+# 4.1 RosettaDesign
+cd 4.1_RosettaDesign
+"$ROSETTA"/rosetta_scripts.mpi.linuxgccrelease \
+    @design.flags \
+    -s dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2_000000001_0001_0001 \
+    -parser:script_vars lig_res=131 cat_res=42,44,54,61,84,85 cst_file=dMKR_dif_cubic_3759_traj2_T0.2_0_2_model_4.0_r8_af2_000000001_0001_0001.cst
+
+# 4.2 Second_MPNN_design
+cd ../4.2_Second_MPNN_design  # change model type and ligand_mpnn_use_side_chain_context flag
+python "$MPNN"/run.py \
+    --model_type "ligand_mpnn" \
+    --pdb_path_multi "json/input_pdb_ids.json" \
+    --fixed_residues_multi "fix_residues_multi.json" \
+    --out_folder "output/LigandMPNN" \
+    -omit_AA "CM" \
+    --temperature 0.1 \
+    --file_ending "_T0.1_ligandmpnn" \
+    --ligand_mpnn_use_side_chain_context 0 \
+    --number_of_batches 10 \
+    --pack_side_chains 1 \
+    --number_of_packs_per_design 1 \
+    --pack_with_ligand_context 1

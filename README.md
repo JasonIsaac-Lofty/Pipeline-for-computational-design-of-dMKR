@@ -1,7 +1,7 @@
 # Overall design pipeline of dMKR
 Yunhao Li, PhD student (Department of Chemistry, Zhejiang University)<br>
 
-12237050@zju.edu.cn
+e_mail: 12237050@zju.edu.cn
 
 #### This pipeline and design protocols are adapted from three articles below, if you want to use this pipeline, please also cite:
 *1. Yeh AH, Norn C, Kipnis Y, Tischer D, Pellock SJ, Evans D, et al. De novo design of luciferases using deep learning. Nature 2023, 614(7949): 774-780.*

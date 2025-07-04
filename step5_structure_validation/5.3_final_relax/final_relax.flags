@@ -1,0 +1,10 @@
+-parser:protocol final_relax.xml
+-extra_res_fa ../../step1_ligand_conformation_search/params/ACP.params
+-extra_res_fa ../../step1_ligand_conformation_search/params/ZN1.params
+-holes:dalphaball /home/liyunhao/Rosetta/main/source/external/DAlpahBall/DAlphaBall.gcc
+-out:path:pdb /output
+-out:path:score /score
+-write_all_connect_info
+-precompute_ig true
+-run:preserve_header true
+-nstruct 1

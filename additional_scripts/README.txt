@@ -1,0 +1,2 @@
+This part was from article "Generalized biomolecular modeling and design with RoseTTAFold All-Atom", not all scripts in this part was used in this study.
+If you use these scripts, you should also cite: Krishna R, Wang J, Ahern W, Sturmfels P, Venkatesh P, Kalvet I, et al. Generalized biomolecular modeling and design with RoseTTAFold All-Atom. Science 2024, 384(6693): eadl2528.

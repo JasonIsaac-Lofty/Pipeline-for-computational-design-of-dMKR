@@ -1,0 +1,56 @@
+#!/bin/bash
+# Example cmd for running RFDiffusionAA, remember to replace the paths
+
+WORK_DIR="step2_de_novo_protein_scaffolds_generation"
+INPUT_PDB="$WORK_DIR/qsite/dMKR.pdb"
+OUTPUT_DIR="$WORK_DIR/2.1_diffusion/dMKR" # Create it first
+OUTPUT_PREFIX="$OUTPUT_DIR/dMKR_dif_cubic"
+CONFIG_DIR="$WORK_DIR/config"
+CONFIG_NAME="config_cubic.yaml"
+CKPT_PATH="/data/liyunhao/software/rf_diffusion_all_atom/RFDiffusionAA_paper_weights.pt"
+RF_SCRIPT="/data/liyunhao/software/rf_diffusion_all_atom/run_inference.py"
+MPNN="/data/liyunhao/software/LigandMPNN"
+MPNN_MODELS="/data/liyunhao/software/LigandMPNN/model_params"
+
+# Change output directory, activate the environment
+cd "$OUTPUT_DIR"
+
+# 2.1 Run RFDiffusionAA
+python "$RF_SCRIPT" \
+  --config-dir="$CONFIG_DIR" \
+  --config-name="$CONFIG_NAME" \
+  inference.input_pdb="$INPUT_PDB" \
+  inference.output_prefix="$OUTPUT_PREFIX" \
+  inference.ckpt_path="$CKPT_PATH" \
+  diffuser.T=100
+
+# 2.2 Run Diffusion analysis
+cd 2.2_filtered_diffusion
+python ../../additional_scripts/diffusion_analysis/process_diffusion_outputs.py \
+    --pdb  "$OUTPUT_DIR" \
+    --ref "$WORK_DIR"/qsite/*.pdb \
+    --params ../../step1_ligand_conformation_search/params/ACP.params \
+    --term_limit 15.0 --SASA_limit 0.3 --loop_limit 0.3 \
+    --ref_catres A94 A96 A106 A119 A199 A200 \
+    --rethread --fix --loop_catres --longest_helix 30 --rog 30.0 \
+    --outdir ./ \
+    --traj 5/30 --nproc 64
+
+# 2.3 ProteinMPNN
+cd 2.3_proteinmpnn
+python "$MPNN"/run.py \
+    --model_type protein_mpnn \
+    --ligand_mpnn_use_atom_context 0 \
+    --fixed_residues_multi masked_pos.jsonl \
+    --out_folder output  \
+    --number_of_batches 10 \
+    --temperature 0.2 \
+    --omit_AA CM \
+    --pdb_path dMKR_dif_cubic_3759_traj2.pdb \
+    --checkpoint_protein_mpnn "$MPNN_MODELS"/proteinmpnn_v_48_020.pt
+
+# 2.4 AF2
+cd ../2.4_af2/output
+python ../../../additional_scripts/af2/af2.py --af-nrecycles 8 --af-models 4 \
+    --fasta 130aa.fasta \
+    --scorefile scores/130aa.csv

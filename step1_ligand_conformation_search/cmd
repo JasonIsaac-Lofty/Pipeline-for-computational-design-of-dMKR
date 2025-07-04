@@ -1,0 +1,2 @@
+# Example cmd for generating Rosetta params file
+$ROSETTA_SOURCE/scripts/python/public/molfile_to_params.py -n ACP -p ACP ACP.sdf

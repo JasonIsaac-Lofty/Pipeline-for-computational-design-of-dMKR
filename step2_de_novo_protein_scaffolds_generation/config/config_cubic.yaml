@@ -1,0 +1,24 @@
+
+defaults:
+  - aa
+
+diffuser:
+  T: 100
+
+inference:
+  num_designs: 4000
+  model_runner: NRBStyleSelfCond
+  ligand: 'ACP'
+
+model:
+  freeze_track_motif: True
+
+contigmap:
+  contigs: ["30-50,A94-94,1-1,A96-96,4-9,A106-106,4-12,A119-119,6-79,A199-200,30-50"]
+  inpaint_str: null
+  length: "110-155"
+
+potentials:
+  guiding_potentials: ["type:ligand_ncontacts,weight:1"] 
+  guide_scale: 2
+  guide_decay: cubic
